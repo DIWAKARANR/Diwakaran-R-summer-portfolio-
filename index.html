@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Summer Portfolio</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        body {
+            background-image: url('/api/placeholder/1600/900'); /* Placeholder for your background image */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .container {
+            max-width: 800px;
+            margin: 250px auto 100px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-sizing: border-box;
+            position: relative;
+            z-index: 1;
+        }
+        h1, h2 {
+            color: #FF6B6B;
+        }
+        h1 {
+            text-align: center;
+            top: 20px;
+            left: 0;
+            right: 0;
+            z-index: 15;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            font-size: 2.5em;
+        }
+        .sun {
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, #FFD93D, #FFA500);
+            border-radius: 50%;
+            top: 20px;
+            left: 20px;
+            z-index: 10;
+            box-shadow: 0 0 30px #FFD93D, 0 0 60px #FFA500, 0 0 90px #FF8C00;
+        }
+        .palm-tree {
+            
+            bottom: 70px;
+            font-size: 120px; /* Increased size */
+            z-index: 20;
+        }
+        .palm-tree:nth-child(1) { left: 0; } /* Moved to left corner */
+        .palm-tree:nth-child(2) { right: 0; }
+        .palm-tree:nth-child(3) { right:0;}/* Moved to right corner */
+        .beach-ball {
+            width: 50px;
+            height: 50px;
+            background: radial-gradient(circle at 30% 30%, #FF6B6B 25%, #4ECDC4 25%, #4ECDC4 50%, #FFD93D 50%, #FFD93D 75%, #45B7D1 75%);
+            border-radius: 50%;
+            
+            bottom: 70px; /* Positioned above the footer */
+            right: 20px;
+            z-index: 25;
+        }
+        footer {
+            background: transparent;
+            color: red;
+            text-align: center;
+            padding: 20px;
+            
+            bottom: 0;
+            width: 100%;
+            z-index: 30;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        #audio-control {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            z-index: 100;
+        }
+        .toggle-btn {
+            background-color: #4ECDC4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .toggle-btn:hover {
+            background-color: #45B7D1;
+        }
+        .toggle-btn.playing {
+            background-color: #FF6B6B;
+        }
+    </style>
+</head>
+<body>
+    <div id="audio-control">
+        <button class="toggle-btn" onclick="toggleAudio()">Toggle Ocean Sounds</button>
+    </div>
+
+    <h1>My Summer Portfolio</h1>
+    <h1>My Name is Diwakaran R</h1>
+
+    <div class="sun">
+        <div class="sunray"></div>
+        <div class="sunray" style="transform: rotate(45deg);"></div>
+        <div class="sunray" style="transform: rotate(90deg);"></div>
+        <div class="sunray" style="transform: rotate(135deg);"></div>
+    </div>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hello! I'm Diwakaran R, a passionate web developer and AI/ML Enthusiast . I enjoy creating innovative solutions and learning new skills.</p>
+        </section>
+        
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Web Development (HTML, CSS, JavaScript, REACT)</li>
+                <li>Python Programming</li>
+                <li>Artificial Intelligence</li>
+                <li>Machine Learning</li>
+                <li>MS Excel</li>
+            </ul>
+        </section>
+        
+        <section id="education">
+            <h2>Education</h2>
+            <ul>
+                <li>BCA - Peri college of arts and science, University of Madras,2022 - 2025</li>
+                <li>HSC - Bharathiyar Matriculation Higher Secondary School, 2021 - 2022</li>
+                <li>SSLC - Bharathiyar Matriculation Higher Secondary School, 2020 - 2021</li>
+            </ul>
+        </section>
+        
+        <section id="internship">
+            <h2>Internship</h2>
+            <p>Web Development Internships</p>
+            <ul>
+                <li>Developed responsive web applications and various mini projects at Codsoft, Prodigy infotech, TechnohacksEdutech, YBI foundation</li>
+
+                
+            </ul>
+        </section>
+        
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li>Crescent shaped Calculator - Html, css and JavaScript</li>
+                <li>Portfolio - Html, css</li>
+                <li>student landing page - Html, css</li>
+            </ul>
+        </section>
+    </div>
+    
+    <div class="palm-tree">🌴</div>
+    <div class="palm-tree">🌴</div>
+    <div class="palm-tree">🌴</div>
+    
+    <div class="beach-ball"></div>
+
+    <footer>
+        <p>&copy; 2024 Diwakaran R. All rights reserved. | Contact: diwakaranrukmangathan@gmail.com</p>
+    </footer>
+
+    <audio id="ocean-sounds" loop>
+        <source src="https://soundbible.com/mp3/Ocean_Waves-Mike_Koenig-980635527.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        const audio = document.getElementById('ocean-sounds');
+        const toggleBtn = document.querySelector('.toggle-btn');
+        audio.volume = 1.0; // Set volume to maximum
+
+        function toggleAudio() {
+            if (audio.paused) {
+                audio.play();
+                toggleBtn.classList.add('playing');
+                toggleBtn.textContent = 'Pause Ocean Sounds';
+            } else {
+                audio.pause();
+                toggleBtn.classList.remove('playing');
+                toggleBtn.textContent = 'Play Ocean Sounds';
+            }
+        }
+
+        // Start playing audio automatically
+        window.addEventListener('load', () => {
+            audio.play().then(() => {
+                toggleBtn.classList.add('playing');
+                toggleBtn.textContent = 'Pause Ocean Sounds';
+            }).catch(e => {
+                console.log("Auto-play was prevented");
+                toggleBtn.textContent = 'Play Ocean Sounds';
+            });
+        });
+    </script>
+</body>
+</html>
+              
